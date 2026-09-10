@@ -1,0 +1,688 @@
+{
+  "jobs": [
+    {
+      "id": "job-1",
+      "title": "Python Developer",
+      "company": "Apex Systems",
+      "department": "Engineering",
+      "location": "Remote / New York, NY",
+      "employment_type": "Full-time",
+      "salary": "$110,000 - $135,000",
+      "description": "We are seeking a skilled Python Developer to build and maintain high-performance backend microservices and data pipelines.",
+      "responsibilities": [
+        "Design and deploy RESTful APIs using FastAPI and Django",
+        "Optimize database queries and data processing pipelines in PostgreSQL",
+        "Collaborate with front-end teams to integrate user-facing elements",
+        "Implement automated unit and integration tests"
+      ],
+      "required_skills": [
+        "Python",
+        "SQL",
+        "FastAPI",
+        "Git",
+        "Docker",
+        "REST APIs"
+      ],
+      "experience_required": "2+ years",
+      "min_experience_years": 2,
+      "education_required": "BS in Computer Science or equivalent",
+      "deadline": "2026-10-30",
+      "status": "Open",
+      "applicants_count": 12,
+      "created_at": "2026-09-01T10:00:00Z"
+    },
+    {
+      "id": "job-2",
+      "title": "Frontend Developer",
+      "company": "Nova Interactive",
+      "department": "Design & Frontend",
+      "location": "San Francisco, CA / Hybrid",
+      "employment_type": "Full-time",
+      "salary": "$105,000 - $130,000",
+      "description": "Looking for a passionate Frontend Developer with deep React experience to build sleek enterprise software interfaces.",
+      "responsibilities": [
+        "Build responsive, accessible user interfaces using React, TypeScript, and Tailwind CSS",
+        "Integrate REST and GraphQL APIs with optimistic UI updates",
+        "Collaborate closely with UI/UX designers to refine customer journeys",
+        "Profile and optimize web app client-side performance"
+      ],
+      "required_skills": [
+        "React",
+        "TypeScript",
+        "JavaScript",
+        "Tailwind CSS",
+        "HTML5/CSS3",
+        "Git"
+      ],
+      "experience_required": "2+ years",
+      "min_experience_years": 2,
+      "education_required": "Bachelor's degree in related field or proven experience",
+      "deadline": "2026-11-15",
+      "status": "Open",
+      "applicants_count": 18,
+      "created_at": "2026-09-02T11:00:00Z"
+    },
+    {
+      "id": "job-3",
+      "title": "Backend Developer",
+      "company": "CloudSphere Labs",
+      "department": "Platform Engineering",
+      "location": "Austin, TX / Remote",
+      "employment_type": "Full-time",
+      "salary": "$115,000 - $145,000",
+      "description": "Join our cloud infrastructure team developing scalable distributed microservices in Node.js and Go.",
+      "responsibilities": [
+        "Architect resilient backend services handling high-concurrency workloads",
+        "Manage database schemas, indexing, and migrations in PostgreSQL and Redis",
+        "Develop secure authentication and authorization systems (OAuth, JWT)",
+        "Monitor application metrics and troubleshoot production bottlenecks"
+      ],
+      "required_skills": [
+        "Node.js",
+        "TypeScript",
+        "SQL",
+        "PostgreSQL",
+        "Redis",
+        "Docker",
+        "REST APIs"
+      ],
+      "experience_required": "3+ years",
+      "min_experience_years": 3,
+      "education_required": "BS in Computer Science or Software Engineering",
+      "deadline": "2026-10-25",
+      "status": "Open",
+      "applicants_count": 9,
+      "created_at": "2026-09-03T09:30:00Z"
+    },
+    {
+      "id": "job-4",
+      "title": "Full Stack Developer",
+      "company": "Vanguard Health Tech",
+      "department": "Product Development",
+      "location": "Boston, MA / Remote",
+      "employment_type": "Full-time",
+      "salary": "$120,000 - $150,000",
+      "description": "Drive end-to-end features for our digital health portal, bridging responsive React frontend and Node/Python services.",
+      "responsibilities": [
+        "Deliver full-stack web applications from database schemas to polished browser UI",
+        "Write clean, modular code with automated testing across stack layers",
+        "Work alongside medical compliance officers to guarantee HIPAA standards"
+      ],
+      "required_skills": [
+        "React",
+        "Node.js",
+        "Python",
+        "SQL",
+        "TypeScript",
+        "Git"
+      ],
+      "experience_required": "3+ years",
+      "min_experience_years": 3,
+      "education_required": "Bachelor's in Computer Science or related",
+      "deadline": "2026-11-01",
+      "status": "Open",
+      "applicants_count": 15,
+      "created_at": "2026-09-04T14:15:00Z"
+    },
+    {
+      "id": "job-5",
+      "title": "React Developer",
+      "company": "PixelPoint Digital",
+      "department": "Engineering",
+      "location": "Chicago, IL / Remote",
+      "employment_type": "Full-time",
+      "salary": "$95,000 - $120,000",
+      "description": "Specialist React Developer needed to craft interactive components and state management architectures.",
+      "responsibilities": [
+        "Develop modern reusable UI libraries in React with Tailwind CSS",
+        "Manage complex client state with React Query and Zustand",
+        "Ensure WCAG 2.1 AA accessibility compliance"
+      ],
+      "required_skills": [
+        "React",
+        "JavaScript",
+        "TypeScript",
+        "CSS",
+        "Redux/Zustand",
+        "REST APIs"
+      ],
+      "experience_required": "2+ years",
+      "min_experience_years": 2,
+      "education_required": "Degree in CS or equivalent portfolio",
+      "deadline": "2026-10-20",
+      "status": "Open",
+      "applicants_count": 8,
+      "created_at": "2026-09-05T08:00:00Z"
+    },
+    {
+      "id": "job-6",
+      "title": "Data Scientist",
+      "company": "Quantis Analytics",
+      "department": "Data & AI",
+      "location": "Seattle, WA / Remote",
+      "employment_type": "Full-time",
+      "salary": "$130,000 - $165,000",
+      "description": "Build predictive machine learning models and extract actionable intelligence from large-scale customer behavioral data.",
+      "responsibilities": [
+        "Formulate ML solutions for predictive forecasting and churn mitigation",
+        "Conduct exploratory data analysis using Pandas, NumPy, and Scikit-Learn",
+        "Deploy inference models via cloud containers"
+      ],
+      "required_skills": [
+        "Python",
+        "SQL",
+        "Machine Learning",
+        "Pandas",
+        "Data Analysis",
+        "Statistics"
+      ],
+      "experience_required": "3+ years",
+      "min_experience_years": 3,
+      "education_required": "Master's or BS in Data Science, Mathematics or CS",
+      "deadline": "2026-11-10",
+      "status": "Open",
+      "applicants_count": 7,
+      "created_at": "2026-09-05T12:00:00Z"
+    },
+    {
+      "id": "job-7",
+      "title": "AI/ML Engineer",
+      "company": "Synthetix AI",
+      "department": "Applied Research",
+      "location": "San Jose, CA / Remote",
+      "employment_type": "Full-time",
+      "salary": "$140,000 - $180,000",
+      "description": "Help develop generative AI pipelines, model fine-tuning workflows, and low-latency retrieval-augmented generation (RAG) services.",
+      "responsibilities": [
+        "Build LLM-powered applications, embedding stores, and semantic search systems",
+        "Fine-tune transformer models and evaluate output quality systematically",
+        "Collaborate with backend engineers to deploy robust vector database pipelines"
+      ],
+      "required_skills": [
+        "Python",
+        "PyTorch",
+        "LLMs",
+        "Vector Databases",
+        "Docker",
+        "FastAPI"
+      ],
+      "experience_required": "3+ years",
+      "min_experience_years": 3,
+      "education_required": "BS/MS in Computer Science or Artificial Intelligence",
+      "deadline": "2026-11-20",
+      "status": "Open",
+      "applicants_count": 11,
+      "created_at": "2026-09-06T09:00:00Z"
+    },
+    {
+      "id": "job-8",
+      "title": "UI/UX Designer",
+      "company": "Loomis Design Studio",
+      "department": "Product Design",
+      "location": "Denver, CO / Hybrid",
+      "employment_type": "Full-time",
+      "salary": "$90,000 - $115,000",
+      "description": "Create intuitive user experiences, wireframes, and design systems for enterprise SaaS applications.",
+      "responsibilities": [
+        "Lead user research sessions, usability testing, and persona creation",
+        "Deliver high-fidelity Figma prototypes and design token libraries",
+        "Partner closely with frontend engineers during sprint implementation"
+      ],
+      "required_skills": [
+        "Figma",
+        "UI/UX Design",
+        "User Research",
+        "Wireframing",
+        "Prototyping",
+        "Design Systems"
+      ],
+      "experience_required": "2+ years",
+      "min_experience_years": 2,
+      "education_required": "Degree in Interaction Design, HCI, or equivalent portfolio",
+      "deadline": "2026-10-31",
+      "status": "Open",
+      "applicants_count": 14,
+      "created_at": "2026-09-06T15:30:00Z"
+    },
+    {
+      "id": "job-9",
+      "title": "DevOps Engineer",
+      "company": "Strata Cloudworks",
+      "department": "Infrastructure",
+      "location": "Remote (US/Canada)",
+      "employment_type": "Full-time",
+      "salary": "$125,000 - $155,000",
+      "description": "Manage CI/CD pipelines, Kubernetes clusters, and automated cloud infrastructure with Terraform.",
+      "responsibilities": [
+        "Maintain multi-region Kubernetes clusters on AWS/GCP",
+        "Automate deployment pipelines and security scanning with GitHub Actions",
+        "Implement observability suites using Prometheus and Grafana"
+      ],
+      "required_skills": [
+        "Docker",
+        "Kubernetes",
+        "AWS",
+        "Terraform",
+        "CI/CD",
+        "Linux",
+        "Python"
+      ],
+      "experience_required": "3+ years",
+      "min_experience_years": 3,
+      "education_required": "BS in Computer Science or relevant cloud certifications",
+      "deadline": "2026-11-05",
+      "status": "Open",
+      "applicants_count": 6,
+      "created_at": "2026-09-07T10:00:00Z"
+    },
+    {
+      "id": "job-10",
+      "title": "Data Analyst",
+      "company": "Beacon Insights",
+      "department": "Business Intelligence",
+      "location": "Atlanta, GA / Remote",
+      "employment_type": "Full-time",
+      "salary": "$80,000 - $100,000",
+      "description": "Transform complex business questions into clear executive dashboards and analytical reports.",
+      "responsibilities": [
+        "Query relational databases using advanced SQL joins and window functions",
+        "Build automated Tableau and PowerBI dashboards for executive stakeholders",
+        "Collaborate with marketing and sales to track revenue KPIs"
+      ],
+      "required_skills": [
+        "SQL",
+        "Excel",
+        "Tableau",
+        "PowerBI",
+        "Python",
+        "Data Visualization"
+      ],
+      "experience_required": "2+ years",
+      "min_experience_years": 2,
+      "education_required": "Bachelor's in Analytics, Business, Statistics, or Math",
+      "deadline": "2026-10-28",
+      "status": "Open",
+      "applicants_count": 16,
+      "created_at": "2026-09-07T14:00:00Z"
+    },
+    {
+      "id": "job-11",
+      "title": "Software Engineer",
+      "company": "OmniCore Software",
+      "department": "Core Platform",
+      "location": "Salt Lake City, UT / Hybrid",
+      "employment_type": "Full-time",
+      "salary": "$105,000 - $135,000",
+      "description": "Generalist software engineer eager to tackle architectural challenges across our web and mobile applications.",
+      "responsibilities": [
+        "Write reliable, test-driven application code in TypeScript and Java/Go",
+        "Participate in design reviews and maintain codebase hygiene",
+        "Support client integration APIs and webhook systems"
+      ],
+      "required_skills": [
+        "TypeScript",
+        "JavaScript",
+        "SQL",
+        "Git",
+        "REST APIs",
+        "Java"
+      ],
+      "experience_required": "2+ years",
+      "min_experience_years": 2,
+      "education_required": "BS in Computer Science or related degree",
+      "deadline": "2026-11-12",
+      "status": "Open",
+      "applicants_count": 10,
+      "created_at": "2026-09-08T09:00:00Z"
+    },
+    {
+      "id": "job-12",
+      "title": "Digital Marketing Specialist",
+      "company": "Horizon Brand Studio",
+      "department": "Growth & Marketing",
+      "location": "Miami, FL / Remote",
+      "employment_type": "Full-time",
+      "salary": "$75,000 - $95,000",
+      "description": "Drive candidate acquisition campaigns, employer branding, and digital talent outreach.",
+      "responsibilities": [
+        "Manage multi-channel paid acquisition campaigns across LinkedIn and Google Ads",
+        "Track conversion funnels and optimize CAC and candidate lead volumes",
+        "Craft compelling recruitment copy and social media campaigns"
+      ],
+      "required_skills": [
+        "SEO",
+        "Google Ads",
+        "Content Marketing",
+        "Analytics",
+        "Social Media",
+        "Copywriting"
+      ],
+      "experience_required": "2+ years",
+      "min_experience_years": 2,
+      "education_required": "Bachelor's in Marketing, Communications or Business",
+      "deadline": "2026-11-08",
+      "status": "Open",
+      "applicants_count": 13,
+      "created_at": "2026-09-08T11:30:00Z"
+    },
+    {
+      "id": "job-13",
+      "title": "HR Executive",
+      "company": "Talent Filter Headquarters",
+      "department": "People Operations",
+      "location": "Dallas, TX / Hybrid",
+      "employment_type": "Full-time",
+      "salary": "$80,000 - $95,000",
+      "description": "Coordinate talent acquisition lifecycles, conduct candidate screenings, and manage employee onboarding programs.",
+      "responsibilities": [
+        "Screen incoming candidate profiles and coordinate with hiring managers",
+        "Schedule technical and behavioral interviews across departments",
+        "Oversee new hire onboarding and compliance records"
+      ],
+      "required_skills": [
+        "Talent Acquisition",
+        "HRIS",
+        "Communication",
+        "Interviewing",
+        "Onboarding",
+        "Employment Law"
+      ],
+      "experience_required": "2+ years",
+      "min_experience_years": 2,
+      "education_required": "Bachelor's in Human Resources or Business Administration",
+      "deadline": "2026-10-29",
+      "status": "Open",
+      "applicants_count": 19,
+      "created_at": "2026-09-08T16:00:00Z"
+    },
+    {
+      "id": "job-14",
+      "title": "Project Manager",
+      "company": "Vanguard Global",
+      "department": "Operations",
+      "location": "Remote (US)",
+      "employment_type": "Full-time",
+      "salary": "$110,000 - $135,000",
+      "description": "Lead cross-functional engineering and design teams to deliver high-priority client deliverables on time.",
+      "responsibilities": [
+        "Facilitate agile sprint planning, backlog grooming, and daily standups",
+        "Track project milestones and manage risk mitigation plans",
+        "Communicate delivery timelines clearly to senior executive leadership"
+      ],
+      "required_skills": [
+        "Agile",
+        "Scrum",
+        "Jira",
+        "Project Planning",
+        "Risk Management",
+        "Stakeholder Communication"
+      ],
+      "experience_required": "3+ years",
+      "min_experience_years": 3,
+      "education_required": "BS/BA Degree, PMP/Scrum certification preferred",
+      "deadline": "2026-11-02",
+      "status": "Open",
+      "applicants_count": 11,
+      "created_at": "2026-09-09T08:00:00Z"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "cand-ahmad-khan",
+      "name": "Ahmad Khan",
+      "email": "ahmad.khan.dev@example.com",
+      "phone": "+1 (555) 234-8901",
+      "profession": "Senior Python & AI Engineer",
+      "skills": [
+        "Python",
+        "FastAPI",
+        "Docker",
+        "PostgreSQL",
+        "PyTorch",
+        "LLMs",
+        "Redis",
+        "AWS"
+      ],
+      "education": "BS in Computer Science, University of Washington",
+      "experience": "5+ years building distributed Python microservices and generative AI services.",
+      "experience_years": 5,
+      "certifications": [
+        "AWS Certified Solutions Architect",
+        "TensorFlow Developer Certificate"
+      ],
+      "projects": [
+        "Automated Document Parser API",
+        "High-throughput RAG Pipeline"
+      ],
+      "summary": "Full-stack Python specialist experienced in asynchronous backend systems and LLM integrations.",
+      "created_at": "2026-09-08T10:00:00Z",
+      "updated_at": "2026-09-08T10:00:00Z"
+    },
+    {
+      "id": "cand-sarah-ahmed",
+      "name": "Sarah Ahmed",
+      "email": "sarah.ahmed@example.com",
+      "phone": "+1 (555) 345-6789",
+      "profession": "Senior Frontend Developer",
+      "skills": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Next.js",
+        "Redux",
+        "GraphQL",
+        "Jest"
+      ],
+      "education": "BS in Software Engineering",
+      "experience": "4 years creating responsive enterprise web applications and design systems.",
+      "experience_years": 4,
+      "certifications": [
+        "Meta Certified Frontend Developer"
+      ],
+      "projects": [
+        "Component Design System",
+        "E-commerce Checkout Microfrontend"
+      ],
+      "summary": "Expert in modern React architectures, state management, and accessible UI engineering.",
+      "created_at": "2026-09-08T11:30:00Z",
+      "updated_at": "2026-09-08T11:30:00Z"
+    },
+    {
+      "id": "cand-marcus-vance",
+      "name": "Marcus Vance",
+      "email": "marcus.vance@example.com",
+      "phone": "+1 (555) 456-7890",
+      "profession": "Full-Stack Developer",
+      "skills": [
+        "React",
+        "Node.js",
+        "TypeScript",
+        "Express",
+        "MongoDB",
+        "Docker",
+        "RESTful APIs"
+      ],
+      "education": "BS in Information Systems",
+      "experience": "3.5 years full stack development delivering end-to-end web platforms.",
+      "experience_years": 3.5,
+      "certifications": [
+        "Node.js Application Developer"
+      ],
+      "projects": [
+        "Realtime Project Management App"
+      ],
+      "summary": "Versatile full-stack engineer bridging modern React interfaces with Node.js APIs.",
+      "created_at": "2026-09-09T08:15:00Z",
+      "updated_at": "2026-09-09T08:15:00Z"
+    }
+  ],
+  "applications": [
+    {
+      "id": "app-seed-1",
+      "candidate_id": "cand-ahmad-khan",
+      "job_id": "job-1",
+      "match_score": 95,
+      "skills_score": 96,
+      "experience_score": 95,
+      "education_score": 94,
+      "matched_skills": [
+        "Python",
+        "FastAPI",
+        "Docker",
+        "PostgreSQL",
+        "AWS"
+      ],
+      "missing_skills": [
+        "Kubernetes"
+      ],
+      "match_reasons": [
+        "Strong 5-year Python background matching Senior requirements",
+        "Extensive FastAPI and asynchronous microservice expertise",
+        "Solid Docker and cloud containerization credentials"
+      ],
+      "status": "Shortlisted",
+      "applied_at": "2026-09-08T10:15:00Z",
+      "updated_at": "2026-09-08T12:00:00Z"
+    },
+    {
+      "id": "app-seed-2",
+      "candidate_id": "cand-sarah-ahmed",
+      "job_id": "job-2",
+      "match_score": 92,
+      "skills_score": 94,
+      "experience_score": 90,
+      "education_score": 92,
+      "matched_skills": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Next.js",
+        "Redux"
+      ],
+      "missing_skills": [
+        "Webpack"
+      ],
+      "match_reasons": [
+        "Exceptional React & TypeScript production experience",
+        "Proven expertise with modern Tailwind and responsive layouts",
+        "Strong track record in enterprise design system modularity"
+      ],
+      "status": "Interview Scheduled",
+      "applied_at": "2026-09-08T11:45:00Z",
+      "updated_at": "2026-09-09T09:00:00Z"
+    },
+    {
+      "id": "app-seed-3",
+      "candidate_id": "cand-marcus-vance",
+      "job_id": "job-3",
+      "match_score": 88,
+      "skills_score": 89,
+      "experience_score": 86,
+      "education_score": 90,
+      "matched_skills": [
+        "React",
+        "Node.js",
+        "TypeScript",
+        "Express",
+        "RESTful APIs"
+      ],
+      "missing_skills": [
+        "GraphQL",
+        "AWS"
+      ],
+      "match_reasons": [
+        "Well-balanced full-stack competencies spanning React and Node.js",
+        "Proficient in robust REST API development and data persistence"
+      ],
+      "status": "Under Review",
+      "applied_at": "2026-09-09T08:30:00Z",
+      "updated_at": "2026-09-09T08:30:00Z"
+    }
+  ],
+  "interviews": [
+    {
+      "id": "int-seed-1",
+      "candidate_id": "cand-sarah-ahmed",
+      "job_id": "job-2",
+      "interviewer": "Sarah Jenkins (HR Director)",
+      "interview_date": "2026-09-18",
+      "interview_time": "11:00 AM",
+      "interview_type": "Online",
+      "meeting_link": "https://meet.google.com/talent-filter-room",
+      "instructions": "Technical frontend architecture review and live component coding walkthrough.",
+      "status": "Scheduled",
+      "created_at": "2026-09-09T09:00:00Z"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notif-seed-1",
+      "candidate_id": "cand-sarah-ahmed",
+      "type": "interview_invitation",
+      "channel": "email",
+      "recipient": "sarah.ahmed@example.com",
+      "subject": "Interview Invitation — Frontend React Developer at PixelPulse Studios",
+      "message": "Dear Sarah Ahmed,\n\nYou are invited to an interview for Frontend React Developer on 2026-09-18 at 11:00 AM via Google Meet.",
+      "status": "Sent",
+      "sent_at": "2026-09-09T09:00:00Z"
+    },
+    {
+      "id": "notif-seed-2",
+      "candidate_id": "cand-sarah-ahmed",
+      "type": "interview_invitation",
+      "channel": "email",
+      "recipient": "kubrakhan585130@gmail.com",
+      "subject": "[HR Calendar] Interview Confirmed: Sarah Ahmed — Frontend React Developer",
+      "message": "Interview scheduled on 2026-09-18 at 11:00 AM with Sarah Ahmed (Online). Meeting: https://meet.google.com/talent-filter-room",
+      "status": "Sent",
+      "sent_at": "2026-09-09T09:00:00Z"
+    },
+    {
+      "id": "notif-seed-3",
+      "candidate_id": "cand-ahmad-khan",
+      "type": "application_received",
+      "channel": "email",
+      "recipient": "kubrakhan585130@gmail.com",
+      "subject": "[HR Alert] New Candidate Application: Ahmad Khan (95% Match)",
+      "message": "Candidate: Ahmad Khan (ahmad.khan.dev@example.com)\nPosition: Senior Python Developer (HyperScale Cloud)\nTalent Filter Score: 95%\nStatus: Under Review",
+      "status": "Sent",
+      "sent_at": "2026-09-08T10:15:00Z"
+    }
+  ],
+  "placements": [
+    {
+      "id": "plc-1",
+      "candidate_id": "cand-sarah",
+      "job_id": "job-2",
+      "candidate_name": "Sarah Ahmed",
+      "job_title": "Frontend Developer",
+      "company": "Nova Interactive",
+      "hired_date": "Yesterday",
+      "announcement": "Sarah Ahmed was matched with a Frontend Developer role at Nova Interactive through Talent Filter.",
+      "created_at": "2026-09-09T14:30:00Z"
+    },
+    {
+      "id": "plc-2",
+      "candidate_id": "cand-david",
+      "job_id": "job-9",
+      "candidate_name": "David Chen",
+      "job_title": "DevOps Engineer",
+      "company": "Strata Cloudworks",
+      "hired_date": "3 days ago",
+      "announcement": "David Chen was successfully placed as Senior DevOps Engineer at Strata Cloudworks with a 94% skills match score.",
+      "created_at": "2026-09-07T16:00:00Z"
+    },
+    {
+      "id": "plc-3",
+      "candidate_id": "cand-elena",
+      "job_id": "job-6",
+      "candidate_name": "Elena Rostova",
+      "job_title": "Data Scientist",
+      "company": "Quantis Analytics",
+      "hired_date": "5 days ago",
+      "announcement": "Elena Rostova joined Quantis Analytics as Data Scientist after screening through Talent Filter.",
+      "created_at": "2026-09-05T10:15:00Z"
+    }
+  ],
+  "activities": []
+}
