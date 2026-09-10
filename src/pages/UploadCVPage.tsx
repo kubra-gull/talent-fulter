@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import { useAppAuth } from '../components/AuthProvider';
 import { ScoreGauge } from '../components/ScoreGauge';
 import { Job, Candidate, JobMatchResult } from '../types';
+import { apiClient } from '../lib/apiClient';
 import {
   UploadCloud,
   FileText,
@@ -162,21 +163,12 @@ Projects:
         );
       }
 
-      const res = await fetch('/api/cv/upload', {
-        method: 'POST',
-        body: formData
-      });
-
-      const data = await res.json();
+      const data = await apiClient.uploadCV(formData);
 
       clearTimeout(timer1);
       clearTimeout(timer2);
       clearTimeout(timer3);
       clearTimeout(timer4);
-
-      if (!res.ok) {
-        throw new Error(data.error || 'Failed to process CV');
-      }
 
       setCandidateResult(data.candidate);
       setRecommendations(data.recommendations || []);
@@ -195,18 +187,8 @@ Projects:
   const handleApplyToJob = async (jobId: string) => {
     if (!candidateResult) return;
     try {
-      const res = await fetch('/api/applications', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          candidate_id: candidateResult.id,
-          job_id: jobId
-        })
-      });
-
-      if (res.ok) {
-        setAppliedJobs((prev) => ({ ...prev, [jobId]: true }));
-      }
+      await apiClient.applyToJob(candidateResult.id, jobId);
+      setAppliedJobs((prev) => ({ ...prev, [jobId]: true }));
     } catch (err) {
       console.error('Apply error:', err);
     }

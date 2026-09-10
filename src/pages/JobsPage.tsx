@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Job, Application } from '../types';
 import { useAppAuth } from '../components/AuthProvider';
+import { apiClient } from '../lib/apiClient';
+import { seedJobs } from '../data/seedData';
 import {
   Search,
   Building2,
@@ -27,8 +29,8 @@ interface JobsPageProps {
 export const JobsPage: React.FC<JobsPageProps> = ({ onNavigate, selectedJobIdFromNav }) => {
   const { role, activeCandidateId, activeCandidateName } = useAppAuth();
 
-  const [jobs, setJobs] = useState<Job[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [jobs, setJobs] = useState<Job[]>(seedJobs);
+  const [loading, setLoading] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedDepartment, setSelectedDepartment] = useState('All');
   const [selectedType, setSelectedType] = useState('All');
@@ -74,9 +76,8 @@ export const JobsPage: React.FC<JobsPageProps> = ({ onNavigate, selectedJobIdFro
 
   const fetchJobs = async () => {
     try {
-      const res = await fetch('/api/jobs');
-      if (res.ok) {
-        const data: Job[] = await res.json();
+      const data = await apiClient.getJobs();
+      if (data && data.length > 0) {
         setJobs(data);
         if (selectedJobIdFromNav) {
           const match = data.find((j) => j.id === selectedJobIdFromNav);
@@ -85,6 +86,7 @@ export const JobsPage: React.FC<JobsPageProps> = ({ onNavigate, selectedJobIdFro
       }
     } catch (err) {
       console.error('Failed to load jobs', err);
+      setJobs(seedJobs);
     } finally {
       setLoading(false);
     }

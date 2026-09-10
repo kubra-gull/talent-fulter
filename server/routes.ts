@@ -18,15 +18,26 @@ import {
 
 export const apiRouter = express.Router();
 
-// Ensure upload directory exists
-const UPLOAD_DIR = path.resolve(process.cwd(), 'public', 'uploads', 'cvs');
-if (!fs.existsSync(UPLOAD_DIR)) {
-  fs.mkdirSync(UPLOAD_DIR, { recursive: true });
+function getUploadDir(): string {
+  try {
+    const publicDir = path.resolve(process.cwd(), 'public', 'uploads', 'cvs');
+    if (!fs.existsSync(publicDir)) {
+      fs.mkdirSync(publicDir, { recursive: true });
+    }
+    fs.accessSync(publicDir, fs.constants.W_OK);
+    return publicDir;
+  } catch {
+    const tmpDir = path.resolve('/tmp', 'uploads', 'cvs');
+    if (!fs.existsSync(tmpDir)) {
+      fs.mkdirSync(tmpDir, { recursive: true });
+    }
+    return tmpDir;
+  }
 }
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, UPLOAD_DIR);
+    cb(null, getUploadDir());
   },
   filename: (req, file, cb) => {
     const cleanName = file.originalname.replace(/[^a-zA-Z0-9.-]/g, '_');

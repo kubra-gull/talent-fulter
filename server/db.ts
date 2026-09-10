@@ -119,13 +119,21 @@ interface DatabaseSchema {
   activities: CandidateActivity[];
 }
 
-const DATA_DIR = path.resolve(process.cwd(), 'data');
-const DB_FILE = path.join(DATA_DIR, 'talent_filter.json');
-
-// Ensure data directory exists
-if (!fs.existsSync(DATA_DIR)) {
-  fs.mkdirSync(DATA_DIR, { recursive: true });
+function getDatabaseFilePath(): string {
+  try {
+    const dataDir = path.resolve(process.cwd(), 'data');
+    if (!fs.existsSync(dataDir)) {
+      fs.mkdirSync(dataDir, { recursive: true });
+    }
+    fs.accessSync(dataDir, fs.constants.W_OK);
+    return path.join(dataDir, 'talent_filter.json');
+  } catch {
+    const tmpDir = '/tmp';
+    return path.join(tmpDir, 'talent_filter.json');
+  }
 }
+
+const DB_FILE = getDatabaseFilePath();
 
 const initialJobs: Job[] = [
   {
@@ -505,8 +513,8 @@ const initialCandidates: Candidate[] = [
     certifications: ['AWS Certified Solutions Architect', 'TensorFlow Developer Certificate'],
     projects: ['Automated Document Parser API', 'High-throughput RAG Pipeline'],
     summary: 'Full-stack Python specialist experienced in asynchronous backend systems and LLM integrations.',
-    created_at: '2026-09-08T10:00:00Z',
-    updated_at: '2026-09-08T10:00:00Z'
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString()
   },
   {
     id: 'cand-sarah-ahmed',
@@ -515,14 +523,14 @@ const initialCandidates: Candidate[] = [
     phone: '+1 (555) 345-6789',
     profession: 'Senior Frontend Developer',
     skills: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js', 'Redux', 'GraphQL', 'Jest'],
-    education: 'BS in Software Engineering',
+    education: 'BS in Software Engineering, UC Berkeley',
     experience: '4 years creating responsive enterprise web applications and design systems.',
     experience_years: 4,
     certifications: ['Meta Certified Frontend Developer'],
     projects: ['Component Design System', 'E-commerce Checkout Microfrontend'],
     summary: 'Expert in modern React architectures, state management, and accessible UI engineering.',
-    created_at: '2026-09-08T11:30:00Z',
-    updated_at: '2026-09-08T11:30:00Z'
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString()
   },
   {
     id: 'cand-marcus-vance',
@@ -531,14 +539,78 @@ const initialCandidates: Candidate[] = [
     phone: '+1 (555) 456-7890',
     profession: 'Full-Stack Developer',
     skills: ['React', 'Node.js', 'TypeScript', 'Express', 'MongoDB', 'Docker', 'RESTful APIs'],
-    education: 'BS in Information Systems',
+    education: 'BS in Information Systems, NYU',
     experience: '3.5 years full stack development delivering end-to-end web platforms.',
     experience_years: 3.5,
     certifications: ['Node.js Application Developer'],
     projects: ['Realtime Project Management App'],
     summary: 'Versatile full-stack engineer bridging modern React interfaces with Node.js APIs.',
-    created_at: '2026-09-09T08:15:00Z',
-    updated_at: '2026-09-09T08:15:00Z'
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString()
+  },
+  {
+    id: 'cand-emily-zhang',
+    name: 'Emily Zhang',
+    email: 'emily.zhang@example.com',
+    phone: '+1 (555) 567-8901',
+    profession: 'Cloud DevOps Specialist',
+    skills: ['Kubernetes', 'Docker', 'AWS', 'Terraform', 'CI/CD', 'Linux', 'Python'],
+    education: 'BS in Computer Engineering, Georgia Tech',
+    experience: '4.5 years implementing automated multi-region Kubernetes deployments and CI/CD pipelines.',
+    experience_years: 4.5,
+    certifications: ['Certified Kubernetes Administrator (CKA)', 'AWS DevOps Engineer Professional'],
+    projects: ['Zero-Downtime Migration Cluster', 'Multi-tenant GitOps Workflow'],
+    summary: 'Dedicated infrastructure automation engineer specializing in container orchestration and declarative cloud architecture.',
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString()
+  },
+  {
+    id: 'cand-david-kim',
+    name: 'David Kim',
+    email: 'david.kim@example.com',
+    phone: '+1 (555) 678-9012',
+    profession: 'Machine Learning Engineer',
+    skills: ['Python', 'PyTorch', 'LLMs', 'Transformers', 'Vector Databases', 'Docker', 'FastAPI'],
+    education: 'MS in Artificial Intelligence, Carnegie Mellon University',
+    experience: '4 years fine-tuning transformer foundation models and building enterprise semantic search engines.',
+    experience_years: 4,
+    certifications: ['DeepLearning.AI Generative AI Specialist'],
+    projects: ['High-throughput Vector Search Engine', 'Medical Domain LLM Fine-tuning'],
+    summary: 'Applied AI researcher proficient in deploying production RAG architectures and low-latency inference endpoints.',
+    created_at: '2026-09-09T14:20:00Z',
+    updated_at: '2026-09-09T14:20:00Z'
+  },
+  {
+    id: 'cand-priya-patel',
+    name: 'Priya Patel',
+    email: 'priya.patel@example.com',
+    phone: '+1 (555) 789-0123',
+    profession: 'Technical Product Manager',
+    skills: ['Product Management', 'Agile/Scrum', 'Data Analysis', 'Jira', 'User Research', 'SQL'],
+    education: 'MBA & BS in Computer Science, Northwestern University',
+    experience: '5 years directing cross-functional SaaS product teams from discovery through global release.',
+    experience_years: 5,
+    certifications: ['Certified Scrum Product Owner (CSPO)'],
+    projects: ['B2B Enterprise Analytics Portal', 'Automated Onboarding Funnel'],
+    summary: 'Data-driven Product Manager with deep technical acumen aligning engineering throughput with high-impact customer outcomes.',
+    created_at: '2026-09-08T11:00:00Z',
+    updated_at: '2026-09-08T11:00:00Z'
+  },
+  {
+    id: 'cand-alex-miller',
+    name: 'Alex Miller',
+    email: 'alex.miller@example.com',
+    phone: '+1 (555) 890-1234',
+    profession: 'Senior Data Platform Engineer',
+    skills: ['Python', 'SQL', 'Apache Spark', 'Kafka', 'Snowflake', 'dbt', 'Docker'],
+    education: 'BS in Computer Science, University of Illinois',
+    experience: '4 years constructing high-volume event streaming architectures and analytical warehouses.',
+    experience_years: 4,
+    certifications: ['Snowflake SnowPro Core Certified', 'Databricks Spark Developer'],
+    projects: ['Streaming Telemetry Ingestion Cluster', 'Enterprise Data Mesh'],
+    summary: 'Senior Data Engineer experienced in building distributed streaming pipelines and analytical data platforms.',
+    created_at: '2026-09-07T16:00:00Z',
+    updated_at: '2026-09-07T16:00:00Z'
   }
 ];
 
@@ -598,6 +670,96 @@ const initialApplications: Application[] = [
     status: 'Under Review',
     applied_at: '2026-09-09T08:30:00Z',
     updated_at: '2026-09-09T08:30:00Z'
+  },
+  {
+    id: 'app-seed-4',
+    candidate_id: 'cand-emily-zhang',
+    job_id: 'job-4',
+    match_score: 94,
+    skills_score: 95,
+    experience_score: 93,
+    education_score: 94,
+    matched_skills: ['Kubernetes', 'Docker', 'AWS', 'Terraform', 'CI/CD', 'Linux'],
+    missing_skills: ['Helm'],
+    match_reasons: [
+      'Certified Kubernetes Administrator with hands-on Terraform infrastructure',
+      'Extensive experience managing multi-region automated CI/CD deployments'
+    ],
+    status: 'Interview Scheduled',
+    applied_at: '2026-09-09T10:00:00Z',
+    updated_at: '2026-09-09T11:30:00Z'
+  },
+  {
+    id: 'app-seed-5',
+    candidate_id: 'cand-david-kim',
+    job_id: 'job-5',
+    match_score: 91,
+    skills_score: 93,
+    experience_score: 88,
+    education_score: 96,
+    matched_skills: ['Python', 'PyTorch', 'LLMs', 'Transformers', 'Docker'],
+    missing_skills: ['C++'],
+    match_reasons: [
+      'Master in AI with proven transformer fine-tuning research experience',
+      'Deep practical knowledge of vector database indexing and RAG architectures'
+    ],
+    status: 'Shortlisted',
+    applied_at: '2026-09-09T15:00:00Z',
+    updated_at: '2026-09-09T16:00:00Z'
+  },
+  {
+    id: 'app-seed-6',
+    candidate_id: 'cand-priya-patel',
+    job_id: 'job-7',
+    match_score: 89,
+    skills_score: 90,
+    experience_score: 90,
+    education_score: 88,
+    matched_skills: ['Product Management', 'Agile/Scrum', 'Data Analysis', 'Jira', 'User Research'],
+    missing_skills: ['Python'],
+    match_reasons: [
+      'Proven leadership delivering B2B SaaS software products',
+      'Strong analytical capabilities bridging business objectives and sprint deliverables'
+    ],
+    status: 'Interview Scheduled',
+    applied_at: '2026-09-09T16:30:00Z',
+    updated_at: '2026-09-10T08:00:00Z'
+  },
+  {
+    id: 'app-seed-7',
+    candidate_id: 'cand-alex-miller',
+    job_id: 'job-6',
+    match_score: 96,
+    skills_score: 97,
+    experience_score: 95,
+    education_score: 94,
+    matched_skills: ['Python', 'SQL', 'Apache Spark', 'Kafka', 'Snowflake', 'dbt'],
+    missing_skills: [],
+    match_reasons: [
+      'Complete tech stack alignment with Spark, Kafka, and Snowflake',
+      '4+ years building high-throughput production data platforms'
+    ],
+    status: 'Hired',
+    applied_at: '2026-09-07T16:30:00Z',
+    updated_at: '2026-09-09T17:00:00Z'
+  },
+  {
+    id: 'app-seed-8',
+    candidate_id: 'cand-ahmad-khan',
+    job_id: 'job-3',
+    match_score: 85,
+    skills_score: 86,
+    experience_score: 88,
+    education_score: 90,
+    matched_skills: ['React', 'TypeScript', 'PostgreSQL', 'RESTful APIs'],
+    missing_skills: ['Node.js'],
+    match_reasons: [
+      'Strong general engineering and database credentials',
+      'Capable frontend competencies in React and TypeScript'
+    ],
+    status: 'Under Review',
+    applied_at: '2026-09-10T08:15:00Z',
+    updated_at: '2026-09-10T08:15:00Z'
   }
 ];
 
@@ -611,9 +773,48 @@ const initialInterviews: Interview[] = [
     interview_time: '11:00 AM',
     interview_type: 'Online',
     meeting_link: 'https://meet.google.com/talent-filter-room',
-    instructions: 'Technical frontend architecture review and live component coding walkthrough.',
+    instructions: 'Technical frontend architecture review, state management evaluation, and live component coding walkthrough.',
     status: 'Scheduled',
     created_at: '2026-09-09T09:00:00Z'
+  },
+  {
+    id: 'int-seed-2',
+    candidate_id: 'cand-emily-zhang',
+    job_id: 'job-4',
+    interviewer: 'David Cho (VP of Infrastructure)',
+    interview_date: '2026-09-19',
+    interview_time: '02:00 PM',
+    interview_type: 'Online',
+    meeting_link: 'https://meet.google.com/talent-devops-room',
+    instructions: 'Kubernetes cluster deployment, CI/CD pipeline automation, and Terraform best practices review.',
+    status: 'Scheduled',
+    created_at: '2026-09-09T11:30:00Z'
+  },
+  {
+    id: 'int-seed-3',
+    candidate_id: 'cand-ahmad-khan',
+    job_id: 'job-1',
+    interviewer: 'Sarah Jenkins (HR Director)',
+    interview_date: '2026-09-20',
+    interview_time: '10:30 AM',
+    interview_type: 'Online',
+    meeting_link: 'https://meet.google.com/talent-python-room',
+    instructions: 'Distributed microservices architecture, async FastAPI pipelines, and high-throughput PostgreSQL scaling.',
+    status: 'Scheduled',
+    created_at: '2026-09-10T08:30:00Z'
+  },
+  {
+    id: 'int-seed-4',
+    candidate_id: 'cand-priya-patel',
+    job_id: 'job-7',
+    interviewer: 'Mark Sterling (Chief Product Officer)',
+    interview_date: '2026-09-21',
+    interview_time: '04:00 PM',
+    interview_type: 'Online',
+    meeting_link: 'https://meet.google.com/talent-pm-room',
+    instructions: 'Product roadmap alignment, stakeholder metrics definition, and customer journey optimization.',
+    status: 'Scheduled',
+    created_at: '2026-09-10T08:00:00Z'
   }
 ];
 
@@ -650,6 +851,17 @@ const initialNotifications: Notification[] = [
     message: 'Candidate: Ahmad Khan (ahmad.khan.dev@example.com)\nPosition: Senior Python Developer (HyperScale Cloud)\nTalent Filter Score: 95%\nStatus: Under Review',
     status: 'Sent',
     sent_at: '2026-09-08T10:15:00Z'
+  },
+  {
+    id: 'notif-seed-4',
+    candidate_id: 'cand-emily-zhang',
+    type: 'interview_invitation',
+    channel: 'email',
+    recipient: 'emily.zhang@example.com',
+    subject: 'Interview Invitation — Cloud DevOps Specialist at CloudScale Matrix',
+    message: 'Dear Emily Zhang,\n\nYou have been invited to interview on 2026-09-19 at 02:00 PM with David Cho.',
+    status: 'Sent',
+    sent_at: '2026-09-09T11:30:00Z'
   }
 ];
 
@@ -664,7 +876,10 @@ class Database {
     if (fs.existsSync(DB_FILE)) {
       try {
         const raw = fs.readFileSync(DB_FILE, 'utf-8');
-        return JSON.parse(raw);
+        const parsed: DatabaseSchema = JSON.parse(raw);
+        if (parsed.candidates && parsed.candidates.length > 0 && parsed.interviews && parsed.interviews.length > 0) {
+          return parsed;
+        }
       } catch (err) {
         console.error('Failed to parse existing DB file, reinitializing', err);
       }
@@ -694,7 +909,7 @@ class Database {
       fs.writeFileSync(tempPath, JSON.stringify(data, null, 2), 'utf-8');
       fs.renameSync(tempPath, DB_FILE);
     } catch (e) {
-      console.error('Error saving database:', e);
+      console.warn('Filesystem write not permitted or failed, state preserved in memory:', e);
     }
   }
 

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Interview } from '../types';
+import { apiClient } from '../lib/apiClient';
+import { seedInterviews, seedCandidates, seedJobs } from '../data/seedData';
 import {
   Calendar,
   Video,
@@ -17,21 +19,26 @@ interface InterviewsPageProps {
   onNavigate: (tab: string, context?: any) => void;
 }
 
+const defaultInterviews: Interview[] = seedInterviews.map((i) => ({
+  ...i,
+  candidate: seedCandidates.find((c) => c.id === i.candidate_id),
+  job: seedJobs.find((j) => j.id === i.job_id)
+}));
+
 export const InterviewsPage: React.FC<InterviewsPageProps> = ({ onNavigate }) => {
-  const [interviews, setInterviews] = useState<Interview[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [interviews, setInterviews] = useState<Interview[]>(defaultInterviews);
+  const [loading, setLoading] = useState(false);
   const [filterType, setFilterType] = useState('All');
 
   const fetchInterviews = async () => {
-    setLoading(true);
     try {
-      const res = await fetch('/api/interviews');
-      if (res.ok) {
-        const data = await res.json();
+      const data = await apiClient.getInterviews();
+      if (data && data.length > 0) {
         setInterviews(data);
       }
     } catch (err) {
       console.error('Failed to load interviews', err);
+      setInterviews(defaultInterviews);
     } finally {
       setLoading(false);
     }
